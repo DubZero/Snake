@@ -23,15 +23,57 @@ public class Player : MonoBehaviour {
         
      
         Invoke("MoveSnake", SpawnTime);
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (transform.eulerAngles.z == 0)
         {
-            print("Left нажато");
-            transform.Rotate(new Vector3(0,0, 90));
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                print("Left нажато");
+                transform.Rotate(new Vector3(0,0, 90));
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                print("Right нажато");
+                transform.Rotate(new Vector3(0, 0,-90));
+            }
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (transform.eulerAngles.z == 180)
         {
-            print("Right нажато");
-            transform.Rotate(new Vector3(0, 0,-90));
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                print("Left нажато");
+                transform.Rotate(new Vector3(0, 0, -90));
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                print("Right нажато");
+                transform.Rotate(new Vector3(0, 0, 90));
+            }
+        }
+        else if (transform.eulerAngles.z == 270)
+        {
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                print("Down нажато");
+                transform.Rotate(new Vector3(0, 0, -90));
+            }
+            else if (Input.GetKey(KeyCode.UpArrow))
+            {
+                print("Up нажато");
+                transform.Rotate(new Vector3(0, 0, 90));
+            }
+        }
+        else if (transform.eulerAngles.z == 90.00001f)
+        {
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                print("Down нажато");
+                transform.Rotate(new Vector3(0, 0, 90));
+            }
+            else if (Input.GetKey(KeyCode.UpArrow))
+            {
+                print("Up нажато");
+                transform.Rotate(new Vector3(0, 0, -90));
+            }
         }
         transform.position += transform.up;
     }
