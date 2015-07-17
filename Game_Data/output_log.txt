@@ -1,0 +1,81 @@
+Mono path[0] = 'C:/Users/Alexandr/Downloads/UnityProjects/Snake/Game_Data/Managed'
+Mono path[1] = 'C:/Users/Alexandr/Downloads/UnityProjects/Snake/Game_Data/Mono'
+Mono config path = 'C:/Users/Alexandr/Downloads/UnityProjects/Snake/Game_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/Alexandr/Downloads/UnityProjects/Snake/Game_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55111
+Multi-casting "[IP] 192.168.56.1 [Port] 55111 [Flags] 2 [Guid] 2237060783 [EditorId] 268645886 [Version] 1048832 [Id] WindowsPlayer(DubZero-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.56.1:55111]
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.208 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\System.dll (this message is harmless)
+Left нажато
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Snake:MoveSnake() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\Snake.cs:47)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+Down нажато
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Snake:MoveSnake() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\Snake.cs:86)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+Left нажато
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Snake:MoveSnake() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\Snake.cs:60)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+Game Over!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Snake:GameOver() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\Snake.cs:172)
+Snake:Update() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\Snake.cs:34)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+Down нажато
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Snake:MoveSnake() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\Snake.cs:86)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+Right нажато
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Snake:MoveSnake() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\Snake.cs:65)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
