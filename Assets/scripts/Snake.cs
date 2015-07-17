@@ -152,6 +152,7 @@ public class Snake : MonoBehaviour
         {
             print("Game Over!");
             StopFlag = true;
+            Application.LoadLevel(0);
             
         }
         // Столкновение с хвостом
@@ -159,6 +160,7 @@ public class Snake : MonoBehaviour
         {
             print("Game Over!");
             StopFlag = true;
+            Application.LoadLevel(0);
         }
     }
   
