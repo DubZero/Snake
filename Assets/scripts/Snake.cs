@@ -27,12 +27,7 @@ public class Snake : MonoBehaviour
     // Проверка на наличие еды в точке контроллера змейки
     void Update()
     {
-        eatFood();
-        
-        if (StopFlag == false)
-        {
-            GameOver();
-        }
+       
     }
     // Управление змейкой
     void MoveSnake()
@@ -142,38 +137,31 @@ public class Snake : MonoBehaviour
         UpWall = Instantiate(Resources.Load("UpWall"), new Vector2(0, 5), Quaternion.identity) as GameObject;
         DownWall = Instantiate(Resources.Load("DownWall"), new Vector2(0, -5), Quaternion.identity) as GameObject;
     }
-    // Функция уничтожения объектов Food при прикосновении змейки
-    void eatFood()
+    // Триггер проверки что контактирует с Объектом Head
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        // 0.01 погрешность возникающая при перемешения из за типа float
-		if (((food.transform.position.x <= transform.position.x + 0.01)&& 
-             (food.transform.position.x >= transform.position.x - 0.01))
-              &&  
-            ((food.transform.position.y <= transform.position.y + 0.01)&&
-             (food.transform.position.y >= transform.position.y - 0.01)))
+        // Столкновение с едой
+        if (coll.tag == "Food")
+        {    
+            eat = true;
+            Destroy(coll.gameObject);
+            SpawnFood();
+        }
+        // Столкновение со стеной
+        else if (coll.tag == "Wall")
         {
-			eat = true;
-            Destroy(food);
-			SpawnFood();
-	    }
-
-    }
-    
-
-    // проверка на столкновение стеной (и с телом змеи - не описано)
-    // 0.01 возможная погрешность при перемещении
-    void GameOver()
-    {
-        if (transform.position.x - 0.01 <= LeftWall.transform.position.x ||
-            transform.position.x + 0.01 >= RightWall.transform.position.x ||
-            transform.position.y + 0.01 >= UpWall.transform.position.y ||
-            transform.position.y - 0.01 <= DownWall.transform.position.y)
+            print("Game Over!");
+            StopFlag = true;
+            
+        }
+        // Столкновение с хвостом
+        else if (coll.tag == "Tail")
         {
             print("Game Over!");
             StopFlag = true;
         }
     }
-   
+  
  }
 
     
