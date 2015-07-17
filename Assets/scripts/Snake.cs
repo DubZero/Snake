@@ -92,37 +92,35 @@ public class Snake : MonoBehaviour
                 transform.Rotate(new Vector3(0, 0, -90));
             }
         }
-       
 
-
+        //=========================
         // Рост змейки
-        
+        //=========================
         Vector2 ta = transform.position;
 
-
-        
-
-        // Ate something? Then insert new Element into gap
+        // Если True то увеличение размера на 1
         if (eat)
         {
-            // Load Prefab into the world
+            // Загрузка префаба хвоста
             tail = Instantiate(Resources.Load("Tail"), ta, Quaternion.identity) as GameObject;
-            // Keep track of it in our tail list
+            // Сохранение пути в лист 
             listTail.Insert(0, tail.transform);
 
-            // Reset the flag
+            // Обнуление флага
             eat = false;
         }
-        // Do we have a Tail?
+        // Есть ли объекти хвоста?
         else if (listTail.Count > 0)
         {
-            // Move last Tail Element to where the Head was
+            // Перемещение элемента хвоста на последнюю позицию где была голова 
             listTail.Last().position = ta;
 
-            // Add to front of list, remove from the back
+            // Добавление в начало листа, и очистка с конца
             listTail.Insert(0, listTail.Last());
             listTail.RemoveAt(listTail.Count - 1);
         }
+
+        // Перемещение на transform.up;
         if (StopFlag == false)
         {
             transform.position += transform.up;
