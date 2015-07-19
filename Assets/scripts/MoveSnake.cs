@@ -20,30 +20,28 @@ public class MoveSnake : MonoBehaviour {
         InvokeRepeating("Move", SpawnTime, SpawnTime);
     }
 
-    
+
     void Update()
     {
-        
+        Control();
         Pause();
         if (Application.loadedLevel == 1)
         {
             MainCam.GetComponent<MainMenu>().WindowNum = 0;
             MainCam.GetComponent<MainMenu>().enabled = false;
         }
-        
-        
     }
-    void Move()
+    void Control()
     {
         // Управление змеей
         if (transform.eulerAngles.z == 0)
         {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 print("Left нажато");
                 transform.Rotate(new Vector3(0, 0, 90));
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 print("Right нажато");
                 transform.Rotate(new Vector3(0, 0, -90));
@@ -51,12 +49,12 @@ public class MoveSnake : MonoBehaviour {
         }
         else if (transform.eulerAngles.z == 180)
         {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 print("Left нажато");
                 transform.Rotate(new Vector3(0, 0, -90));
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 print("Right нажато");
                 transform.Rotate(new Vector3(0, 0, 90));
@@ -64,12 +62,12 @@ public class MoveSnake : MonoBehaviour {
         }
         else if (transform.eulerAngles.z == 270)
         {
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 print("Down нажато");
                 transform.Rotate(new Vector3(0, 0, -90));
             }
-            else if (Input.GetKey(KeyCode.UpArrow))
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 print("Up нажато");
                 transform.Rotate(new Vector3(0, 0, 90));
@@ -77,17 +75,20 @@ public class MoveSnake : MonoBehaviour {
         }
         else if (transform.eulerAngles.z == 90.00001f)
         {
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 print("Down нажато");
                 transform.Rotate(new Vector3(0, 0, 90));
             }
-            else if (Input.GetKey(KeyCode.UpArrow))
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 print("Up нажато");
                 transform.Rotate(new Vector3(0, 0, -90));
             }
         }
+    }
+    void Move()
+    {
         //=========================
         // Рост змейки
         //=========================
