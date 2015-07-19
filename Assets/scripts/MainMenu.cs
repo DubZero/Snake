@@ -3,11 +3,14 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 
-    public MoveSnake Speed;
+    public float Speed = 0.3f;
     public int WindowNum;
 	void Start () 
     {
-        WindowNum = 1;
+        if (WindowNum != 0)
+        {
+            WindowNum = 1;
+        }
 	}
 	
     void OnGUI()

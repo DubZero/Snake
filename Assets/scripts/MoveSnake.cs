@@ -3,23 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 public class MoveSnake : MonoBehaviour {
-    
-    public float SpawnTime = 0.5f;   // частота перемещения змейки]
+    public float SpawnTime;   // частота перемещения змейки
     public bool StopFlag = false;
     public GameObject tail = null;
     public bool eat;
+    
 
     List<Transform> listTail = new List<Transform>(); // Лист типа Transform для позиций хвоста
     
     void Start()
     {
+        SpawnTime = GetComponent<MainMenu>().Speed;
         InvokeRepeating("Move", SpawnTime, SpawnTime);
     }
 
     
     void Update()
     {
-        
+        Pause();
     }
     void Move()
     {
@@ -96,12 +97,15 @@ public class MoveSnake : MonoBehaviour {
         // Есть ли объекти хвоста?
         else if (listTail.Count > 0)
         {
-            // Перемещение элемента хвоста на последнюю позицию где была голова 
-            listTail.Last().position = ta;
+            // Перемещение элемента хвоста на последнюю позицию где была голова
+            if (!StopFlag)
+            {
+                listTail.Last().position = ta;
 
-            // Добавление в начало листа, и очистка с конца
-            listTail.Insert(0, listTail.Last());
-            listTail.RemoveAt(listTail.Count - 1);
+                // Добавление в начало листа, и очистка с конца
+                listTail.Insert(0, listTail.Last());
+                listTail.RemoveAt(listTail.Count - 1);
+            }
         }
 
         // Перемещение на transform.up;
@@ -124,8 +128,7 @@ public class MoveSnake : MonoBehaviour {
         // Столкновение со стеной
         else if (coll.tag == "Wall")
         {
-            print("Game Over!");
-            StopFlag = true;
+            print("Game Over!");            
             Application.LoadLevel(0);
 
         }
@@ -134,8 +137,22 @@ public class MoveSnake : MonoBehaviour {
         else if (coll.tag == "Tail")
         {
             print("Game Over!");
-            StopFlag = true;
             Application.LoadLevel(0);
+        }
+    }
+
+    void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (StopFlag == true)
+            {
+                StopFlag = false;
+            }
+            else
+            {
+                StopFlag = true;
+            }
         }
     }
 }
