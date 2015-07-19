@@ -17,7 +17,7 @@ public class MoveSnake : MonoBehaviour {
     void Start()
     {
         SpawnTime = GameInfo.Speed;
-        InvokeRepeating("Move", SpawnTime, SpawnTime);
+        InvokeRepeating("Move", 1.0f, SpawnTime);
     }
 
 
