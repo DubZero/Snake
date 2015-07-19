@@ -22,13 +22,10 @@ public class MainMenu : MonoBehaviour {
             {
                 WindowNum = 2;
             }
-            if (GUI.Button(new Rect(10, 70, 180, 30), "Настройки"))
+         
+            if (GUI.Button(new Rect(10, 70, 180, 30), "Выход"))
             {
                 WindowNum = 3;
-            }
-            if (GUI.Button(new Rect(10, 110, 180, 30), "Выход"))
-            {
-                WindowNum = 4;
             }
         } 
         if (WindowNum == 2)
@@ -39,37 +36,17 @@ public class MainMenu : MonoBehaviour {
                 WindowNum = 0;
                 Application.LoadLevel(1);
             }
-            Speed = GUI.HorizontalScrollbar(new Rect(10, 90, 180, 30), Speed,0.05f, 0.5f, 0.1f);
+            GUI.Label(new Rect(55, 85, 200, 40), "Скорость змейки");
+            Speed = GUI.HorizontalScrollbar(new Rect(10, 110, 180, 30), Speed, 0.03f, 0.5f, 0.1f);
+
+            GUI.Label(new Rect(55, 130, 180, 30), "Размер границ");
             
-            if (GUI.Button(new Rect(10, 130, 180, 30), "Размер границ"))
-            {
-                
-            }
             if (GUI.Button(new Rect(10, 170, 180, 30), "Назад"))
             {
                 WindowNum = 1;
             }
         }
-
         if (WindowNum == 3)
-        {
-            GUI.Label(new Rect(50, 10, 180, 30), "Настройки Игры");
-            if (GUI.Button(new Rect(10, 40, 180, 30), "Игра"))
-            {
-            }
-            if (GUI.Button(new Rect(10, 80, 180, 30), "Аудио"))
-            {
-            }
-            if (GUI.Button(new Rect(10, 120, 180, 30), "Видео"))
-            {
-
-            }
-            if (GUI.Button(new Rect(10, 160, 180, 30), "Назад"))
-            {
-                WindowNum = 1;
-            }
-        }
-        if (WindowNum == 4)
         {
             GUI.Label(new Rect(50, 10, 180, 30), "Вы уже выходите?");
             if (GUI.Button(new Rect(10, 40, 180, 30), "Да"))
