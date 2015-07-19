@@ -2,9 +2,9 @@ Mono path[0] = 'C:/Users/Alexandr/Downloads/UnityProjects/Snake/Game_Data/Manage
 Mono path[1] = 'C:/Users/Alexandr/Downloads/UnityProjects/Snake/Game_Data/Mono'
 Mono config path = 'C:/Users/Alexandr/Downloads/UnityProjects/Snake/Game_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/Alexandr/Downloads/UnityProjects/Snake/Game_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55038
-Multi-casting "[IP] 192.168.56.1 [Port] 55038 [Flags] 2 [Guid] 2007613614 [EditorId] 2534227416 [Version] 1048832 [Id] WindowsPlayer(DubZero-PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [192.168.56.1:55038]
+PlayerConnection initialized network socket : 0.0.0.0 55389
+Multi-casting "[IP] 192.168.56.1 [Port] 55389 [Flags] 2 [Guid] 2195444969 [EditorId] 2534227416 [Version] 1048832 [Id] WindowsPlayer(DubZero-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.56.1:55389]
 Initialize engine version: 5.1.1f1 (2046fc06d4d8)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -23,309 +23,34 @@ Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Man
 Loading C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.158 seconds
+- Completed reload, in  0.061 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Alexandr\Downloads\UnityProjects\Snake\Game_Data\Managed\System.dll (this message is harmless)
-Загрузка
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-MainMenu:OnGUI() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MainMenu.cs:36)
- 
-(Filename: C:/Users/Alexandr/Downloads/UnityProjects/Snake/Assets/scripts/MainMenu.cs Line: 36)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1715)
-
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.656430 ms
+UnloadTime: 0.753711 ms
 System memory in use before: 13.8 MB.
 System memory in use after: 13.8 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 211.
-Total: 0.273103 ms (FindLiveObjects: 0.020973 ms CreateObjectMapping: 0.023204 ms MarkObjects: 0.204827 ms  DeleteObjects: 0.012941 ms)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:36)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Down нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:57)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:49)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Up нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:62)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:36)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Up нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:62)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Left нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:31)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Down нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:70)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Left нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:44)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Down нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:70)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:49)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Up нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:62)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:36)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Up нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:62)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Left нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:31)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Down нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:70)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:49)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Down нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:57)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Left нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:44)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Up нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:75)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:36)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Up нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:62)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:36)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Down нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:57)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:49)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Up нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:62)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Left нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:31)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Down нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:70)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Left нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:44)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Down нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:70)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:49)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Up нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:62)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
-
-Right нажато
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:Move() (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:36)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 222.
+Total: 0.243204 ms (FindLiveObjects: 0.019634 ms CreateObjectMapping: 0.039269 ms MarkObjects: 0.172251 ms  DeleteObjects: 0.008924 ms)
 
 Game Over!
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
-MoveSnake:OnTriggerEnter2D(Collider2D) (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:127)
+MoveSnake:OnTriggerEnter2D(Collider2D) (at C:\Users\Alexandr\Downloads\UnityProjects\Snake\Assets\scripts\MoveSnake.cs:137)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.079472 ms
-System memory in use before: 13.8 MB.
-System memory in use after: 13.8 MB.
+UnloadTime: 0.498458 ms
+System memory in use before: 14.0 MB.
+System memory in use after: 14.0 MB.
 
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 180.
-Total: 0.601095 ms (FindLiveObjects: 0.039269 ms CreateObjectMapping: 0.024989 ms MarkObjects: 0.495334 ms  DeleteObjects: 0.037484 ms)
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 191.
+Total: 0.228924 ms (FindLiveObjects: 0.021866 ms CreateObjectMapping: 0.011602 ms MarkObjects: 0.174036 ms  DeleteObjects: 0.019634 ms)
 

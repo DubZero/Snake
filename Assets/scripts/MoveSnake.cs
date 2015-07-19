@@ -7,20 +7,31 @@ public class MoveSnake : MonoBehaviour {
     public bool StopFlag = false;
     public GameObject tail = null;
     public bool eat;
+    public GameObject MainCam;
     
+
+   
 
     List<Transform> listTail = new List<Transform>(); // Лист типа Transform для позиций хвоста
     
     void Start()
     {
-        SpawnTime = GetComponent<MainMenu>().Speed;
+        SpawnTime = GameInfo.Speed;
         InvokeRepeating("Move", SpawnTime, SpawnTime);
     }
 
     
     void Update()
     {
+        
         Pause();
+        if (Application.loadedLevel == 1)
+        {
+            MainCam.GetComponent<MainMenu>().WindowNum = 0;
+            MainCam.GetComponent<MainMenu>().enabled = false;
+        }
+        
+        
     }
     void Move()
     {
@@ -77,12 +88,10 @@ public class MoveSnake : MonoBehaviour {
                 transform.Rotate(new Vector3(0, 0, -90));
             }
         }
-
         //=========================
         // Рост змейки
         //=========================
         Vector2 ta = transform.position;
-
         // Если True то увеличение размера на 1
         if (eat)
         {
@@ -90,7 +99,6 @@ public class MoveSnake : MonoBehaviour {
             tail = Instantiate(Resources.Load("Tail"), ta, Quaternion.identity) as GameObject;
             // Сохранение пути в лист 
             listTail.Insert(0, tail.transform);
-
             // Обнуление флага
             eat = false;
         }
@@ -101,13 +109,11 @@ public class MoveSnake : MonoBehaviour {
             if (!StopFlag)
             {
                 listTail.Last().position = ta;
-
                 // Добавление в начало листа, и очистка с конца
                 listTail.Insert(0, listTail.Last());
                 listTail.RemoveAt(listTail.Count - 1);
             }
         }
-
         // Перемещение на transform.up;
         if (StopFlag == false)
         {
@@ -128,7 +134,8 @@ public class MoveSnake : MonoBehaviour {
         // Столкновение со стеной
         else if (coll.tag == "Wall")
         {
-            print("Game Over!");            
+            print("Game Over!");
+            StopFlag = true;
             Application.LoadLevel(0);
 
         }
@@ -137,6 +144,7 @@ public class MoveSnake : MonoBehaviour {
         else if (coll.tag == "Tail")
         {
             print("Game Over!");
+            StopFlag = true;
             Application.LoadLevel(0);
         }
     }
