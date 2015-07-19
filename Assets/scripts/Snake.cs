@@ -132,14 +132,15 @@ public class Snake : MonoBehaviour
     // Генерация стен
     void SpawnWalls()
     {
-        LeftWall = Instantiate(Resources.Load("LeftWall"), new Vector2(-10, 0), Quaternion.identity) as GameObject;
-        RightWall = Instantiate(Resources.Load("RightWall"), new Vector2(10, 0), Quaternion.identity) as GameObject;
+        LeftWall = Instantiate(Resources.Load("LeftWall"), new Vector2(-9, 0), Quaternion.identity) as GameObject;
+        RightWall = Instantiate(Resources.Load("RightWall"), new Vector2(9, 0), Quaternion.identity) as GameObject;
         UpWall = Instantiate(Resources.Load("UpWall"), new Vector2(0, 5), Quaternion.identity) as GameObject;
         DownWall = Instantiate(Resources.Load("DownWall"), new Vector2(0, -5), Quaternion.identity) as GameObject;
     }
     // Триггер проверки что контактирует с Объектом Head
     void OnTriggerEnter2D(Collider2D coll)
     {
+
         // Столкновение с едой
         if (coll.tag == "Food")
         {    
@@ -147,6 +148,7 @@ public class Snake : MonoBehaviour
             Destroy(coll.gameObject);
             SpawnFood();
         }
+
         // Столкновение со стеной
         else if (coll.tag == "Wall")
         {
@@ -155,6 +157,7 @@ public class Snake : MonoBehaviour
             Application.LoadLevel(0);
             
         }
+
         // Столкновение с хвостом
         else if (coll.tag == "Tail")
         {
