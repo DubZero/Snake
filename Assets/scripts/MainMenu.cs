@@ -3,11 +3,14 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 
-
-    public int WindowNum;
+    public float Speed;
+    public int WindowNum = 1;
 	void Start () 
     {
-        WindowNum = 1;
+        if (Application.loadedLevel == 0)
+        {
+            WindowNum = 1;        
+        }
 	}
 	
     void OnGUI()
@@ -33,13 +36,11 @@ public class MainMenu : MonoBehaviour {
             GUI.Label(new Rect(10, 0, 200, 40), "Выберите уровень сложности");
             if (GUI.Button(new Rect(10, 50, 180, 30), "Начать игру"))
             {
-                Debug.Log("Загрузка");
+                WindowNum = 0;
                 Application.LoadLevel(1);
             }
-            if (GUI.Button(new Rect(10, 90, 180, 30), "Скорость змейки"))
-            {
-               
-            }
+            Speed = GUI.HorizontalScrollbar(new Rect(10, 90, 180, 30), Speed,0.05f, 0.5f, 0.1f);
+            
             if (GUI.Button(new Rect(10, 130, 180, 30), "Размер границ"))
             {
                 
@@ -61,6 +62,7 @@ public class MainMenu : MonoBehaviour {
             }
             if (GUI.Button(new Rect(10, 120, 180, 30), "Видео"))
             {
+
             }
             if (GUI.Button(new Rect(10, 160, 180, 30), "Назад"))
             {

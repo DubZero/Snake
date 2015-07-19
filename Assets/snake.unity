@@ -87,57 +87,34 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &723753646
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &1362700869 stripped
+--- !u!1 &1362700869
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 153530, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
-  m_PrefabInternal: {fileID: 723753646}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1362700876}
+  - 33: {fileID: 1362700874}
+  - 23: {fileID: 1362700873}
+  - 50: {fileID: 1362700870}
+  - 61: {fileID: 1362700871}
+  - 114: {fileID: 1362700872}
+  - 114: {fileID: 1362700877}
+  - 114: {fileID: 1362700875}
+  m_Layer: 0
+  m_Name: Head
+  m_TagString: Head
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!50 &1362700870
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 5018430, guid: d6410d3962273b34bb405fb09ba6e3df,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362700869}
   m_Mass: 1
@@ -152,7 +129,8 @@ Rigidbody2D:
 --- !u!61 &1362700871
 BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 6163020, guid: d6410d3962273b34bb405fb09ba6e3df,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362700869}
   m_Enabled: 1
@@ -165,7 +143,8 @@ BoxCollider2D:
 --- !u!114 &1362700872
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11481294, guid: d6410d3962273b34bb405fb09ba6e3df,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362700869}
   m_Enabled: 1
@@ -175,6 +154,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseFlag: 0
   Head: {fileID: 1362700869}
+--- !u!23 &1362700873
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2363278, guid: d6410d3962273b34bb405fb09ba6e3df,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362700869}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 45c2996c9f99d074582ea27b5384755b, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1362700874
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3314500, guid: d6410d3962273b34bb405fb09ba6e3df,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362700869}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1362700875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,16 +195,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362700869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfcab9447511bc94bad96ff115c576d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 31bcf746039fd4149af7d200f71868f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 0}
-  tail: {fileID: 0}
-  LeftWall: {fileID: 0}
-  UpWall: {fileID: 0}
-  RightWall: {fileID: 0}
-  DownWall: {fileID: 0}
-  SpawnTime: .400000006
+  food: {fileID: 111356, guid: 11479874e2efa8d48b8613282ecf350a, type: 2}
+  LeftWall: {fileID: 198038, guid: 338adab1173cac34786b0e8c32a74a93, type: 2}
+  UpWall: {fileID: 114274, guid: a9c6fb82d1e568542ae667e459ae4fa0, type: 2}
+  RightWall: {fileID: 100032, guid: 90c6a417725baba40922993b693d860d, type: 2}
+  DownWall: {fileID: 133748, guid: ee7de0efa8d891e4d900778fdb684694, type: 2}
+--- !u!4 &1362700876
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 456674, guid: d6410d3962273b34bb405fb09ba6e3df, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362700869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &1362700877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11442640, guid: d6410d3962273b34bb405fb09ba6e3df,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362700869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2420cd71c30334ca189c604a746b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuInfo: {fileID: 0}
+  SpawnTime: .300000012
+  StopFlag: 0
+  tail: {fileID: 196124, guid: 2094703c15436074a8f5012079250137, type: 2}
+  eat: 0
 --- !u!1 &1982137869
 GameObject:
   m_ObjectHideFlags: 0
