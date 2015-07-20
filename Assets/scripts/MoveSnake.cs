@@ -20,8 +20,6 @@ public class MoveSnake : MonoBehaviour {
         SpawnTime = GameInfo.Speed;
         InvokeRepeating("Move", 1.0f, SpawnTime);
     }
-
-
     void Update()
     {
         Control();
@@ -35,6 +33,7 @@ public class MoveSnake : MonoBehaviour {
     void ScoreCalc(float Size, float Speed)
     {
         Score += 3/((int)Size) * (int)(Speed * 100);
+        GameObject.Find("ScoreText").GetComponent<ScoreManager>().score = Score;  
     }
     void Control()
     {
