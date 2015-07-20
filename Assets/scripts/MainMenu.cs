@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour {
             WindowNum = 1;        
         }
 	}
-	
+   
     void OnGUI()
     {
         GUI.BeginGroup(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200));
@@ -38,6 +38,7 @@ public class MainMenu : MonoBehaviour {
             }
             GUI.Label(new Rect(55, 85, 200, 40), "Скорость змейки");
             Speed = GUI.HorizontalScrollbar(new Rect(10, 110, 180, 30), Speed, 0.03f, 0.5f, 0.1f);
+            
 
             GUI.Label(new Rect(55, 130, 180, 30), "Размер границ");
             
