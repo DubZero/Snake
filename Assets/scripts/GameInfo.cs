@@ -6,7 +6,7 @@ public class GameInfo : MonoBehaviour {
     public GameObject Info;
     public static float Speed;
     public static float Size;
-    public static int Score = 1234;
+    public static int Score;
     void Awake()
     {
         DontDestroyOnLoad(Info);

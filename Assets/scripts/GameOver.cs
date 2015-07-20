@@ -16,7 +16,7 @@ public class GameOver : MonoBehaviour {
         {
             Debug.Log("GameOver!");
             GameOverFlag = true;
-            ScoreString = GameInfo.Score.ToString();
+            ScoreString = GetComponent<MoveSnake>().Score.ToString();
         }
 	}
     void OnGUI()

@@ -8,6 +8,7 @@ public class MoveSnake : MonoBehaviour {
     public GameObject tail = null;
     public bool eat;
     public GameObject MainCam;
+    public int Score = 0;
     
 
    
@@ -30,6 +31,10 @@ public class MoveSnake : MonoBehaviour {
             MainCam.GetComponent<MainMenu>().WindowNum = 0;
             MainCam.GetComponent<MainMenu>().enabled = false;
         }
+    }
+    void ScoreCalc(float Size, float Speed)
+    {
+        Score += 3/((int)Size) * (int)(Speed * 100);
     }
     void Control()
     {
@@ -128,6 +133,8 @@ public class MoveSnake : MonoBehaviour {
         if (coll.tag == "Food")
         {
             eat = true;
+            ScoreCalc(GameInfo.Size, GameInfo.Speed);
+            Debug.Log(Score);
             Destroy(coll.gameObject);
             GetComponent<Spawn>().SpawnFood();
         }
@@ -147,7 +154,6 @@ public class MoveSnake : MonoBehaviour {
             
         }
     }
-
     void Pause()
     {
         if (!(GetComponent<GameOver>().GameOverFlag))
