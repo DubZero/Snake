@@ -13,11 +13,10 @@ public class MainMenu : MonoBehaviour {
             WindowNum = 1;        
         }
 	}
-   
     void OnGUI()
     {
         GUI.BeginGroup(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200));
-        if (WindowNum == 1)
+        if (WindowNum == 1) // Главное окно
         {
             if (GUI.Button(new Rect(10, 30, 180, 30), "Играть"))
             {
@@ -32,7 +31,7 @@ public class MainMenu : MonoBehaviour {
                 WindowNum = 4;
             }
         } 
-        if (WindowNum == 2)
+        if (WindowNum == 2) // Окно начать игру
         {
             GUI.Label(new Rect(10, 0, 200, 40), "Выберите уровень сложности");
             if (GUI.Button(new Rect(10, 30, 180, 30), "Начать игру"))
@@ -53,11 +52,7 @@ public class MainMenu : MonoBehaviour {
                 WindowNum = 1;
             }
         }
-        if (WindowNum == 3)
-        {
-
-        }
-        if (WindowNum == 4)
+        if (WindowNum == 4)// Окно выхода
         {
             GUI.Label(new Rect(50, 10, 180, 30), "Вы уже выходите?");
             if (GUI.Button(new Rect(10, 40, 180, 30), "Да"))
@@ -70,5 +65,13 @@ public class MainMenu : MonoBehaviour {
             }
         }
         GUI.EndGroup();
+        if (WindowNum == 3)// Окно таблица рекордов
+        {
+            GUI.Box(new Rect(150, 30, Screen.width - 300, Screen.height - 60), "Таблица рекордов - Не работает пока что");
+            if (GUI.Button(new Rect(Screen.width / 2 - 90, Screen.height - 100, 180, 30), "Назад"))
+            {
+                WindowNum = 1;
+            }
+        }
     }
 }

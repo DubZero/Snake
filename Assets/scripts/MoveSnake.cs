@@ -9,93 +9,101 @@ public class MoveSnake : MonoBehaviour {
     public bool eat;
     public GameObject MainCam;
     public int Score = 0;
-    
+    public int TransformCount = 0;// Счетчик ходов для стабилизации управления
 
    
 
-    List<Transform> listTail = new List<Transform>(); // Лист типа Transform для позиций хвоста
+    List<Transform> listTail = new List<Transform>(); // Лист типа Transform для хранения позиций хвоста
     
     void Start()
     {
-        SpawnTime = GameInfo.Speed;
-        InvokeRepeating("Move", 1.0f, SpawnTime);
+        SpawnTime = GameInfo.Speed; // Передача параметров из сцены меню
+        InvokeRepeating("Move", 1.0f, SpawnTime); //Вызов Функции начиная с 1 сек каждые SpawnTime секунд
     }
     void Update()
     {
-        Control();
-        Pause();
-        if (Application.loadedLevel == 1)
-        {
-            MainCam.GetComponent<MainMenu>().WindowNum = 0;
-            MainCam.GetComponent<MainMenu>().enabled = false;
-        }
+        Control(); // Управление поворотом змеи
+        Pause();   // Проверка на паузу
     }
-    void ScoreCalc(float Size, float Speed)
+    void ScoreCalc(float Size, float Speed) // Подсчет очков на основе скорости и размеров поля (сложность игры) 
     {
-        Score += 3/((int)Size) * (int)(Speed * 100);
+        Score += 3/((int)Size) * (int)((1/Speed) * 100);
         GameObject.Find("ScoreText").GetComponent<ScoreManager>().score = Score;  
     }
     void Control()
     {
         // Управление змеей
-        if (transform.eulerAngles.z == 0)
+        if (TransformCount == 1)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (transform.eulerAngles.z == 0)
             {
-                print("Left нажато");
-                transform.Rotate(new Vector3(0, 0, 90));
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    print("Left нажато");
+                    transform.Rotate(new Vector3(0, 0, 90));
+                    TransformCount--;
+                }
+                else if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    print("Right нажато");
+                    transform.Rotate(new Vector3(0, 0, -90));
+                    TransformCount--;
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (transform.eulerAngles.z == 180)
             {
-                print("Right нажато");
-                transform.Rotate(new Vector3(0, 0, -90));
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    print("Left нажато");
+                    transform.Rotate(new Vector3(0, 0, -90));
+                    TransformCount--;
+                }
+                else if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    print("Right нажато");
+                    transform.Rotate(new Vector3(0, 0, 90));
+                    TransformCount--;
+                }
             }
-        }
-        else if (transform.eulerAngles.z == 180)
-        {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (transform.eulerAngles.z == 270)
             {
-                print("Left нажато");
-                transform.Rotate(new Vector3(0, 0, -90));
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    print("Down нажато");
+                    transform.Rotate(new Vector3(0, 0, -90));
+                    TransformCount--;
+                }
+                else if (Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    print("Up нажато");
+                    transform.Rotate(new Vector3(0, 0, 90));
+                    TransformCount--;
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (transform.eulerAngles.z == 90.00001f)
             {
-                print("Right нажато");
-                transform.Rotate(new Vector3(0, 0, 90));
-            }
-        }
-        else if (transform.eulerAngles.z == 270)
-        {
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                print("Down нажато");
-                transform.Rotate(new Vector3(0, 0, -90));
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                print("Up нажато");
-                transform.Rotate(new Vector3(0, 0, 90));
-            }
-        }
-        else if (transform.eulerAngles.z == 90.00001f)
-        {
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                print("Down нажато");
-                transform.Rotate(new Vector3(0, 0, 90));
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                print("Up нажато");
-                transform.Rotate(new Vector3(0, 0, -90));
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    print("Down нажато");
+                    transform.Rotate(new Vector3(0, 0, 90));
+                    TransformCount--;
+                }
+                else if (Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    print("Up нажато");
+                    transform.Rotate(new Vector3(0, 0, -90));
+                    TransformCount--;
+                }
             }
         }
     }
     void Move()
     {
-        //=========================
+        if (TransformCount == 1)
+        {
+            TransformCount = 0;
+        }
         // Рост змейки
-        //=========================
         Vector2 ta = transform.position;
         // Если True то увеличение размера на 1
         if (eat)
@@ -119,9 +127,10 @@ public class MoveSnake : MonoBehaviour {
                 listTail.RemoveAt(listTail.Count - 1);
             }
         }
-        // Перемещение на transform.up;
+        // Перемещение
         if (StopFlag == false)
         {
+            TransformCount = 1;
             transform.position += transform.up;
         }
     }
@@ -131,26 +140,22 @@ public class MoveSnake : MonoBehaviour {
         // Столкновение с едой
         if (coll.tag == "Food")
         {
-            eat = true;
-            ScoreCalc(GameInfo.Size, GameInfo.Speed);
-            Debug.Log(Score);
-            Destroy(coll.gameObject);
-            GetComponent<Spawn>().SpawnFood();
+            eat = true; // Флаг для роста змеи
+            ScoreCalc(GameInfo.Size, GameInfo.Speed); // Подсчет очков 
+            Destroy(coll.gameObject); // Удаление объекта еды
+            GetComponent<Spawn>().SpawnFood(); // Создание нового объекта
         }
 
         // Столкновение со стеной
         else if (coll.tag == "Wall")
         {
             StopFlag = true;
-            
-
         }
 
         // Столкновение с хвостом
         else if (coll.tag == "Tail")
         {
-            StopFlag = true;
-            
+            StopFlag = true;  
         }
     }
     void Pause()

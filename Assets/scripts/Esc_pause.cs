@@ -29,7 +29,6 @@ public class Esc_pause : MonoBehaviour {
     {
         if (PauseFlag)
         {
-
             if (GUI.Button(new Rect((Screen.width - 200) / 2, (Screen.height + 60) / 2, 200, 30), "Начать заного"))
             {
                 Application.LoadLevel(1);
@@ -37,9 +36,7 @@ public class Esc_pause : MonoBehaviour {
             if (GUI.Button(new Rect((Screen.width - 200) / 2, (Screen.height + 150) / 2, 200, 30), "Выход"))
             {
                 Application.LoadLevel(0);
-            }
-           
+            } 
         }
-
     }
 }

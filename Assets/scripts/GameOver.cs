@@ -6,21 +6,21 @@ public class GameOver : MonoBehaviour {
 
     public bool GameOverFlag = false;
     public string ScoreString;
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
+	void Start () {	}
 	void Update () {
+        // Поражение если StopFlag = true и PauseFlag = false
         if (GetComponent<MoveSnake>().StopFlag && !(GetComponent<Esc_pause>().PauseFlag) && !GameOverFlag )
         {
             Debug.Log("GameOver!");
             GameOverFlag = true;
-            ScoreString = GetComponent<MoveSnake>().Score.ToString();
+            ScoreString = GetComponent<MoveSnake>().Score.ToString(); // Перевод результата в String 
+            GameInfo.Score = GetComponent<MoveSnake>().Score; // Запись последнего результата
         }
 	}
     void OnGUI()
     {
+
+        // Окно Game Over
         if (GameOverFlag)
         {
             GUI.Box(new Rect(50, 30, Screen.width - 100, Screen.height - 60),"Game Over!");
