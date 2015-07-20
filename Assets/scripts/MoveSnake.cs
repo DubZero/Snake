@@ -135,32 +135,33 @@ public class MoveSnake : MonoBehaviour {
         // Столкновение со стеной
         else if (coll.tag == "Wall")
         {
-            print("Game Over!");
             StopFlag = true;
-            Application.LoadLevel(0);
+            
 
         }
 
         // Столкновение с хвостом
         else if (coll.tag == "Tail")
         {
-            print("Game Over!");
             StopFlag = true;
-            Application.LoadLevel(0);
+            
         }
     }
 
     void Pause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!(GetComponent<GameOver>().GameOverFlag))
         {
-            if (StopFlag == true)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                StopFlag = false;
-            }
-            else
-            {
-                StopFlag = true;
+                if (StopFlag == true)
+                {
+                    StopFlag = false;
+                }
+                else
+                {
+                    StopFlag = true;
+                }
             }
         }
     }

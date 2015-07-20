@@ -10,15 +10,18 @@ public class Esc_pause : MonoBehaviour {
 	
 	}
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(!(GetComponent<GameOver>().GameOverFlag))
         {
-            if (PauseFlag == true)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                PauseFlag = false;
-            }
-            else
-            {
-                PauseFlag = true;
+                if (PauseFlag == true)
+                {
+                    PauseFlag = false;
+                }
+                else
+                {
+                    PauseFlag = true;
+                }
             }
         }
 	}
