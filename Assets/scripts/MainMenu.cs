@@ -4,6 +4,7 @@ using System.Collections;
 public class MainMenu : MonoBehaviour {
 
     public float Speed;
+    public float Size;
     public int WindowNum = 1;
 	void Start () 
     {
@@ -37,12 +38,14 @@ public class MainMenu : MonoBehaviour {
                 Application.LoadLevel(1);
             }
             GUI.Label(new Rect(55, 85, 200, 40), "Скорость змейки");
-            Speed = GUI.HorizontalScrollbar(new Rect(10, 110, 180, 30), Speed, 0.03f, 0.5f, 0.1f);
+            Speed = GUI.HorizontalScrollbar(new Rect(10, 110, 180, 30), Speed, 0.05f, 0.55f, 0.1f);
             
 
             GUI.Label(new Rect(55, 130, 180, 30), "Размер границ");
+
+            Size = GUI.HorizontalScrollbar(new Rect(10, 155, 180, 30), Size, 0.25f, 1.0f, 3.25f);
             
-            if (GUI.Button(new Rect(10, 170, 180, 30), "Назад"))
+            if (GUI.Button(new Rect(10, 180, 180, 30), "Назад"))
             {
                 WindowNum = 1;
             }
