@@ -6,6 +6,7 @@ public class GameOver : MonoBehaviour {
 
     public bool GameOverFlag = false;
     public string ScoreString;
+    public string NickName = "";
 	void Start () {	}
 	void Update () {
         // Поражение если StopFlag = true и PauseFlag = false
@@ -15,6 +16,7 @@ public class GameOver : MonoBehaviour {
             GameOverFlag = true;
             ScoreString = GetComponent<MoveSnake>().Score.ToString(); // Перевод результата в String 
             GameInfo.Score = GetComponent<MoveSnake>().Score; // Запись последнего результата
+            GameInfo.Name = NickName;
         }
 	}
     void OnGUI()
@@ -25,8 +27,10 @@ public class GameOver : MonoBehaviour {
         {
             GUI.Box(new Rect(50, 30, Screen.width - 100, Screen.height - 60),"Game Over!");
 
-            GUI.Label(new Rect(Screen.width / 2 - 60, Screen.height / 2, 200, 200), "Очки: ");
-            ScoreString = GUI.TextArea(new Rect(Screen.width / 2 - 20, Screen.height / 2, 80, 20), ScoreString);
+            GUI.Label(new Rect(Screen.width / 2 - 40, Screen.height / 2, 200, 200), "Очки: ");
+            GUI.Label(new Rect(Screen.width / 2, Screen.height / 2, 80, 20),ScoreString);
+            GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 40, 200, 20), "Введите имя: ");
+            NickName = GUI.TextArea(new Rect(Screen.width / 2 - 10, Screen.height / 2 + 40, 150, 20), NickName);
 
             if (GUI.Button(new Rect(Screen.width / 2 - 250, Screen.height / 2 + 100, 200, 30), "Начать заново"))
             {
