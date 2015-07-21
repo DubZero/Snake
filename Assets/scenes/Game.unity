@@ -156,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 233430243}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 20, y: 1, z: 20}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -260,6 +260,7 @@ MonoBehaviour:
   eat: 0
   MainCam: {fileID: 1629981890}
   Score: 0
+  TransformCount: 0
 --- !u!114 &246007617
 MonoBehaviour:
   m_ObjectHideFlags: 0

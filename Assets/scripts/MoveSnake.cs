@@ -27,7 +27,7 @@ public class MoveSnake : MonoBehaviour {
     }
     void ScoreCalc(float Size, float Speed) // Подсчет очков на основе скорости и размеров поля (сложность игры) 
     {
-        Score += 3/((int)Size) * (int)((1/Speed) * 100);
+        Score += 6/((int)Size) * (int)((1/Speed) * 100);
         GameObject.Find("ScoreText").GetComponent<ScoreManager>().score = Score;  
     }
     void Control()

@@ -29,7 +29,7 @@ public class Esc_pause : MonoBehaviour {
     {
         if (PauseFlag)
         {
-            if (GUI.Button(new Rect((Screen.width - 200) / 2, (Screen.height + 60) / 2, 200, 30), "Начать заного"))
+            if (GUI.Button(new Rect((Screen.width - 200) / 2, (Screen.height + 60) / 2, 200, 30), "Начать заново"))
             {
                 Application.LoadLevel(1);
             }

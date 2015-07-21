@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour {
             GUI.Label(new Rect(Screen.width / 2 - 60, Screen.height / 2, 200, 200), "Очки: ");
             ScoreString = GUI.TextArea(new Rect(Screen.width / 2 - 20, Screen.height / 2, 80, 20), ScoreString);
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 250, Screen.height / 2 + 100, 200, 30), "Начать заного"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 250, Screen.height / 2 + 100, 200, 30), "Начать заново"))
             {
                 Application.LoadLevel(1);
             }
