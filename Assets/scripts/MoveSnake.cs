@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 public class MoveSnake : MonoBehaviour {
-    public float SpawnTime;   // частота перемещения змейки
+    public float SpawnTime;   // Частота перемещения змейки
     public bool StopFlag = false;
     public GameObject tail = null;
     public bool eat;
-    public GameObject MainCam;
     public int Score = 0;
     public int TransformCount = 0;// Счетчик ходов для стабилизации управления
 
@@ -131,7 +130,8 @@ public class MoveSnake : MonoBehaviour {
         if (StopFlag == false)
         {
             TransformCount = 1;
-            transform.position += transform.up;
+            transform.Translate(Vector3.up);
+            
         }
     }
     void OnTriggerEnter2D(Collider2D coll)

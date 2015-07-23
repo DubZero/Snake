@@ -228,6 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverFlag: 0
   ScoreString: 
+  NickName: 
 --- !u!222 &246007614
 CanvasRenderer:
   m_ObjectHideFlags: 0
