@@ -35,7 +35,7 @@ public class GameOver : MonoBehaviour
             GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 40, 200, 20), "Введите имя: ");
             NickName = GUI.TextArea(new Rect(Screen.width / 2 - 10, Screen.height / 2 + 40, 150, 20), NickName);
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 250, Screen.height / 2 + 100, 200, 30), "Начать заново"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 250, Screen.height / 2 + 100, 200, 30), "Начать заново") || Input.GetKeyDown(KeyCode.Space))
             {
                 if (NickName == "")
                 {
@@ -45,6 +45,7 @@ public class GameOver : MonoBehaviour
                 highscore = HighScoreManager._instance.GetHighScore();   
                 Application.LoadLevel(1);
             }
+
             if (GUI.Button(new Rect(Screen.width / 2 + 50, Screen.height / 2 + 100, 200, 30), "В главное меню"))
             {
                if (NickName == "")
@@ -55,7 +56,6 @@ public class GameOver : MonoBehaviour
                highscore = HighScoreManager._instance.GetHighScore();   
                Application.LoadLevel(0);
             }
-
        }
 
     }

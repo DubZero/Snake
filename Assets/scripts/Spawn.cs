@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Linq;
 public class Spawn : MonoBehaviour {
     public GameObject food; // объект еда
     public GameObject LeftWall;// объект Левая граница
@@ -21,6 +21,33 @@ public class Spawn : MonoBehaviour {
         int x = (int)Random.Range(LeftWall.transform.position.x, RightWall.transform.position.x);
         int y = (int)Random.Range(DownWall.transform.position.y, UpWall.transform.position.y);
         food = Instantiate(Resources.Load("Food"), new Vector2(x, y), Quaternion.identity) as GameObject;
+        Bounds foodBounds = food.GetComponent<Collider2D>().bounds;
+        
+        while (true)
+        {
+            bool intersects = false;
+            foreach(Transform Pos in GetComponent<MoveSnake>().listTail)
+            {
+               while (Mathf.Round(Pos.transform.position.x) == Mathf.Round(food.transform.position.x) &&
+                   Mathf.Round(Pos.transform.position.y) == Mathf.Round(food.transform.position.y))
+      
+                {
+                    Debug.Log(Mathf.Round(food.transform.position.x));
+                    Debug.Log(Mathf.Round(Pos.transform.position.x));
+                    Debug.Log(Mathf.Round(food.transform.position.y));
+                    Debug.Log(Mathf.Round(Pos.transform.position.y));
+                    food.transform.position = new Vector2((int)Random.Range(LeftWall.transform.position.x, RightWall.transform.position.x),
+                                                  (int)Random.Range(DownWall.transform.position.y, UpWall.transform.position.y));
+                    intersects = true;
+                    break;
+                }
+                
+            }
+            if (!intersects)
+            {
+                break;
+            }
+        }    
     }
     // Генерация стен
     void SpawnWalls()

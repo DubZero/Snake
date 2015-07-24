@@ -12,7 +12,7 @@ public class MoveSnake : MonoBehaviour {
 
    
 
-    List<Transform> listTail = new List<Transform>(); // Лист типа Transform для хранения позиций хвоста
+    public List<Transform> listTail = new List<Transform>(); // Лист типа Transform для хранения позиций хвоста
     
     void Start()
     {

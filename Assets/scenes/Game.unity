@@ -259,7 +259,6 @@ MonoBehaviour:
   StopFlag: 0
   tail: {fileID: 196124, guid: 2094703c15436074a8f5012079250137, type: 2}
   eat: 0
-  MainCam: {fileID: 1629981890}
   Score: 0
   TransformCount: 0
 --- !u!114 &246007617
