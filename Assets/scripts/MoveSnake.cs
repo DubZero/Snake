@@ -9,9 +9,6 @@ public class MoveSnake : MonoBehaviour {
     public bool eat;
     public int Score = 0;
     public int TransformCount = 0;// Счетчик ходов для стабилизации управления
-
-   
-
     public List<Transform> listTail = new List<Transform>(); // Лист типа Transform для хранения позиций хвоста
     
     void Start()
@@ -96,12 +93,8 @@ public class MoveSnake : MonoBehaviour {
             }
         }
     }
-    void Move()
+    void Growth()
     {
-        if (TransformCount == 1)
-        {
-            TransformCount = 0;
-        }
         // Рост змейки
         Vector2 ta = transform.position;
         // Если True то увеличение размера на 1
@@ -126,6 +119,14 @@ public class MoveSnake : MonoBehaviour {
                 listTail.RemoveAt(listTail.Count - 1);
             }
         }
+    }
+    void Move()
+    {
+        if (TransformCount == 1)
+        {
+            TransformCount = 0;
+        }
+        Growth();
         // Перемещение
         if (StopFlag == false)
         {
